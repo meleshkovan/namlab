@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAM Lab — Product Strategy · Process Design · R&D Consulting</title>
+  <meta name="description" content="NAM Lab is a product & R&D consulting studio. We validate ideas through Customer Development, design BPMN processes, and build discovery-to-delivery pipelines that scale." />
+  <meta property="og:title" content="NAM Lab — Product Strategy · Process Design · R&D Consulting" />
+  <meta property="og:description" content="We validate ideas. Design processes. Ship products. A team of product & R&D practitioners using Customer Development to bring value and change the everyday." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://namlab.io" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%233B82F6'/><text x='5' y='23' font-size='18' font-weight='bold' fill='%23fff'>N</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__logo">NAM<span>Lab</span></div>
+      <div class="loader__bar"><div class="loader__progress"></div></div>
+      <div class="loader__tagline">Product & R&D Consulting</div>
+    </div>
+  </div>
+
+  <!-- ══════ NAV ══════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="logo">
+        <span class="logo__mark">N</span>
+        <span class="logo__text">NAM Lab</span>
+      </a>
+      <div class="nav__links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#method">Method</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Clients</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="mailto:info@namlab.io" class="btn btn--accent btn--nav">Start a Project</a>
+      <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#method">Method</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Clients</a>
+      <a href="#contact">Contact</a>
+      <a href="mailto:info@namlab.io" class="btn btn--accent btn--full" style="margin-top:16px">Start a Project</a>
+    </div>
+  </div>
+
+  <!-- ══════ HERO ══════ -->
+  <header class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+      <div class="hero__noise"></div>
+      <div class="hero__grid"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__left">
+        <div class="hero__badge" data-anim="fade-up">
+          <span class="hero__badge-pulse"></span>
+          Product & R&D Consulting Studio
+        </div>
+        <h1 class="hero__title" data-anim="fade-up" data-delay="1">
+          We validate ideas.<br/>
+          Design processes.<br/>
+          <span class="hero__accent">Ship products.</span>
+        </h1>
+        <p class="hero__sub" data-anim="fade-up" data-delay="2">
+          NAM Lab is a team of product strategists & R&D practitioners who use Customer Development to bring real value — and change the everyday.
+        </p>
+        <div class="hero__ctas" data-anim="fade-up" data-delay="3">
+          <a href="mailto:cooperation@namlab.io" class="btn btn--accent btn--lg">
+            Book Discovery Call
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#services" class="btn btn--glass btn--lg">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero__right" data-anim="fade-up" data-delay="3">
+        <div class="hero__visual">
+          <div class="hero__ring hero__ring--1"></div>
+          <div class="hero__ring hero__ring--2"></div>
+          <div class="hero__ring hero__ring--3"></div>
+          <div class="hero__core">
+            <!-- Core icon -->
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="hero__node hero__node--1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            Discovery
+          </div>
+          <div class="hero__node hero__node--2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            Validate
+          </div>
+          <div class="hero__node hero__node--3">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            Ship
+          </div>
+          <div class="hero__node hero__node--4">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+            Scale
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__stats" data-anim="fade-up" data-delay="4">
+      <div class="hero__stat">
+        <span class="hero__stat-val" data-count="40">0</span><span class="hero__stat-suf">+</span>
+        <span class="hero__stat-lbl">Clients Served</span>
+      </div>
+      <div class="hero__stat-div"></div>
+      <div class="hero__stat">
+        <span class="hero__stat-val" data-count="120">0</span><span class="hero__stat-suf">+</span>
+        <span class="hero__stat-lbl">Processes Redesigned</span>
+      </div>
+      <div class="hero__stat-div"></div>
+      <div class="hero__stat">
+        <span class="hero__stat-val" data-count="10">0</span><span class="hero__stat-suf">+</span>
+        <span class="hero__stat-lbl">Years Experience</span>
+      </div>
+      <div class="hero__stat-div"></div>
+      <div class="hero__stat">
+        <span class="hero__stat-val" data-count="93">0</span><span class="hero__stat-suf">%</span>
+        <span class="hero__stat-lbl">Client Retention</span>
+      </div>
+    </div>
+
+    <div class="hero__scroll"><div class="hero__scroll-dot"></div></div>
+  </header>
+
+  <!-- ══════ MARQUEE ══════ -->
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <div class="marquee__track">
+        <span>Customer Development</span><span class="mq-dot"></span>
+        <span>BPMN 2.0</span><span class="mq-dot"></span>
+        <span>Product Strategy</span><span class="mq-dot"></span>
+        <span>Discovery → Delivery</span><span class="mq-dot"></span>
+        <span>Process Audit</span><span class="mq-dot"></span>
+        <span>Portfolio Evaluation</span><span class="mq-dot"></span>
+        <span>OKR Alignment</span><span class="mq-dot"></span>
+        <span>Six Sigma</span><span class="mq-dot"></span>
+        <span>SAFe</span><span class="mq-dot"></span>
+        <span>Design Thinking</span><span class="mq-dot"></span>
+        <span>Customer Development</span><span class="mq-dot"></span>
+        <span>BPMN 2.0</span><span class="mq-dot"></span>
+        <span>Product Strategy</span><span class="mq-dot"></span>
+        <span>Discovery → Delivery</span><span class="mq-dot"></span>
+        <span>Process Audit</span><span class="mq-dot"></span>
+        <span>Portfolio Evaluation</span><span class="mq-dot"></span>
+        <span>OKR Alignment</span><span class="mq-dot"></span>
+        <span>Six Sigma</span><span class="mq-dot"></span>
+        <span>SAFe</span><span class="mq-dot"></span>
+        <span>Design Thinking</span><span class="mq-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ ABOUT ══════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__photo-col" data-anim="fade-right">
+          <div class="about__photo-wrap">
+            <img src="assets/nataly.png" alt="Nataliia Meleshkova — Founder, NAM Lab" class="about__photo" loading="lazy" />
+            <div class="about__photo-border"></div>
+          </div>
+          <div class="about__certs">
+            <span>SAFe PO/PM</span><span>Six Sigma BB</span><span>IBM Design Thinking</span>
+          </div>
+        </div>
+        <div class="about__text-col" data-anim="fade-up">
+          <span class="tag">About the Founder</span>
+          <h2 class="title">Nataliia Meleshkova<br/><em>10+ years shaping products & operations</em></h2>
+          <p class="about__bio">From Chief Product Officer to Head of Business Consulting, Nataliia has led product strategy and process transformation across SaaS, PaaS, ERP, Oil & Gas, TMS, e-commerce, and enterprise platforms — at companies like <strong>WEZOM</strong>, <strong>Clario Tech</strong>, <strong>ZEO Alliance</strong>, and <strong>Kromtech</strong>.</p>
+          <p class="about__bio">NAM Lab was born from a simple conviction: great products start with validated customer insights, disciplined processes, and relentless focus on value. We combine Customer Development methodology with deep operational expertise to help teams stop guessing and start shipping.</p>
+          <div class="about__highlights">
+            <div class="about__hl">
+              <div class="about__hl-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+              </div>
+              <div><strong>CPO & Senior PM</strong><span>ERP, SaaS & PaaS product leadership</span></div>
+            </div>
+            <div class="about__hl">
+              <div class="about__hl-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <div><strong>Head of Business Consulting</strong><span>Full customer engagement cycles</span></div>
+            </div>
+            <div class="about__hl">
+              <div class="about__hl-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div><strong>Operational Excellence Lead</strong><span>Six Sigma, Lean, process optimization</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ SERVICES ══════ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header" data-anim="fade-up">
+        <span class="tag">Our Services</span>
+        <h2 class="title">End-to-end product consulting<br/><em>from idea to market</em></h2>
+        <p class="sub">We don't just advise — we embed, execute, and transfer knowledge so your team owns the outcome.</p>
+      </div>
+
+      <!-- SVC 1 -->
+      <div class="svc" data-anim="fade-up">
+        <div class="svc__head">
+          <div class="svc__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <div class="svc__meta"><h3>Strategy Audit & Corporate Consulting</h3><p>Diagnose. Align. Accelerate.</p></div>
+          <span class="svc__num">01</span>
+          <button class="svc__toggle" aria-label="Expand"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        </div>
+        <div class="svc__body">
+          <div class="svc__text">
+            <p>We perform deep organizational audits mapping your current processes, product portfolio, team structures, and strategic alignment. Using Six Sigma, Lean, and our proprietary maturity model, we identify where value leaks and where growth hides.</p>
+            <div class="svc__cols">
+              <div><h4>What You Get</h4><ul><li>Current-state organizational diagnostic</li><li>Strategy-to-execution gap analysis</li><li>Competitive & market positioning review</li><li>Prioritized transformation roadmap</li><li>Executive readout & stakeholder alignment</li></ul></div>
+              <div><h4>Best For</h4><ul><li>Companies scaling past product-market fit</li><li>Orgs with misaligned teams & unclear strategy</li><li>Pre-M&A due diligence on product/ops</li><li>Post-pivot strategic recalibration</li></ul></div>
+            </div>
+          </div>
+          <div class="svc__card">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            <div class="svc__card-val">47%</div>
+            <div class="svc__card-lbl">Avg. reduction in<br/>strategy-execution gap</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVC 2 -->
+      <div class="svc" data-anim="fade-up">
+        <div class="svc__head">
+          <div class="svc__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <div class="svc__meta"><h3>BPMN Process Design & Optimization</h3><p>Map. Model. Automate.</p></div>
+          <span class="svc__num">02</span>
+          <button class="svc__toggle" aria-label="Expand"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        </div>
+        <div class="svc__body">
+          <div class="svc__text">
+            <p>We design, document, and optimize your business processes using BPMN 2.0 notation. Every process map serves product goals and strategic objectives — not just whiteboard aesthetics.</p>
+            <div class="svc__cols">
+              <div><h4>What You Get</h4><ul><li>As-is & to-be BPMN 2.0 process models</li><li>Cross-functional workflow mapping</li><li>Bottleneck identification & elimination</li><li>Automation opportunity assessment</li><li>Process governance framework</li></ul></div>
+              <div><h4>Best For</h4><ul><li>Teams with undocumented tribal knowledge</li><li>Compliance-driven industries (FinTech, HealthTech)</li><li>Companies preparing for ISO / SOC audits</li><li>Orgs scaling from startup to growth stage</li></ul></div>
+            </div>
+          </div>
+          <div class="svc__card">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            <div class="svc__card-val">60%</div>
+            <div class="svc__card-lbl">Avg. reduction in<br/>process waste & rework</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVC 3 -->
+      <div class="svc" data-anim="fade-up">
+        <div class="svc__head">
+          <div class="svc__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+          </div>
+          <div class="svc__meta"><h3>Product Portfolio Evaluation & Execution</h3><p>Prioritize. Focus. Win.</p></div>
+          <span class="svc__num">03</span>
+          <button class="svc__toggle" aria-label="Expand"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        </div>
+        <div class="svc__body">
+          <div class="svc__text">
+            <p>Not every product deserves investment. We apply rigorous scoring models to evaluate your portfolio, identify what to kill, what to double down on — and help you execute those decisions.</p>
+            <div class="svc__cols">
+              <div><h4>What You Get</h4><ul><li>Product-by-product health scorecard</li><li>Kill / Invest / Grow decision matrix</li><li>Market fit & monetization analysis</li><li>Resource reallocation plan</li><li>Execution tracking dashboard</li></ul></div>
+              <div><h4>Best For</h4><ul><li>Multi-product companies with diluted focus</li><li>Startups pivoting between product lines</li><li>PE/VC-backed companies optimizing ROI</li><li>Enterprise with legacy product debt</li></ul></div>
+            </div>
+          </div>
+          <div class="svc__card">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            <div class="svc__card-val">2.8x</div>
+            <div class="svc__card-lbl">Avg. improvement in<br/>revenue per product</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVC 4 -->
+      <div class="svc" data-anim="fade-up">
+        <div class="svc__head">
+          <div class="svc__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div class="svc__meta"><h3>Discovery → Delivery Pipeline Design</h3><p>Ideate. Validate. Ship. Repeat.</p></div>
+          <span class="svc__num">04</span>
+          <button class="svc__toggle" aria-label="Expand"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        </div>
+        <div class="svc__body">
+          <div class="svc__text">
+            <p>We set up the entire product pipeline: from customer research and hypothesis validation through backlog management, sprint execution, and production release. Built on Dual-Track Agile and Customer Development principles.</p>
+            <div class="svc__cols">
+              <div><h4>What You Get</h4><ul><li>Dual-Track Agile implementation</li><li>Customer Development interview frameworks</li><li>Hypothesis-driven backlog system</li><li>Release management & delivery cadence</li><li>Team coaching & knowledge transfer</li></ul></div>
+              <div><h4>Best For</h4><ul><li>Product teams stuck in "build trap"</li><li>Orgs with slow or broken delivery cycles</li><li>Teams adopting product-led growth</li><li>Companies launching new product lines</li></ul></div>
+            </div>
+          </div>
+          <div class="svc__card">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <div class="svc__card-val">3x</div>
+            <div class="svc__card-lbl">Avg. increase in<br/>delivery velocity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ METHOD ══════ -->
+  <section class="method" id="method">
+    <div class="container">
+      <div class="section-header" data-anim="fade-up">
+        <span class="tag">Our Method</span>
+        <h2 class="title">Customer Development at the core<br/><em>of everything we do</em></h2>
+        <p class="sub">We don't start with solutions. We start with customer problems and validate every assumption before committing resources.</p>
+      </div>
+      <div class="method__timeline">
+        <div class="method__line"></div>
+        <div class="method__step" data-anim="fade-up" data-delay="0">
+          <div class="method__marker"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+          <div class="method__step-body"><h3>Customer Discovery</h3><p>Deep interviews & research to understand real pain points. We identify who your customer truly is, what they struggle with, and what they'll pay to solve.</p></div>
+        </div>
+        <div class="method__step" data-anim="fade-up" data-delay="1">
+          <div class="method__marker"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+          <div class="method__step-body"><h3>Customer Validation</h3><p>Test hypotheses with rapid experiments, MVPs, and prototypes. We prove demand before you invest in full development — saving months and millions.</p></div>
+        </div>
+        <div class="method__step" data-anim="fade-up" data-delay="2">
+          <div class="method__marker"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="method__step-body"><h3>Customer Creation</h3><p>Build the go-to-market engine: positioning, channels, pricing, and growth loops designed around validated customer insights.</p></div>
+        </div>
+        <div class="method__step" data-anim="fade-up" data-delay="3">
+          <div class="method__marker"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+          <div class="method__step-body"><h3>Company Building</h3><p>Scale the validated model with optimized processes, OKR-aligned teams, and delivery pipelines that sustain growth without chaos.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ TEAM ══════ -->
+  <section class="team" id="team">
+    <div class="container">
+      <div class="team__inner" data-anim="fade-up">
+        <div class="team__text">
+          <span class="tag">Our Team</span>
+          <h2 class="title">A team of <em>product & R&D</em> practitioners</h2>
+          <p>We're not theorists. Our team has launched products, managed P&Ls, led engineering teams, and run customer development cycles at companies from seed-stage startups to enterprise. We exist to validate product ideas based on Customer Development cycles — in order to bring value and change everyday.</p>
+        </div>
+        <div class="team__cards">
+          <div class="team__card">
+            <div class="team__card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+            <h4>Product Strategists</h4>
+            <p>CPOs and Senior PMs who've owned roadmaps, led prioritization, and driven product-market fit across SaaS, PaaS, and marketplaces.</p>
+          </div>
+          <div class="team__card">
+            <div class="team__card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+            <h4>R&D Researchers</h4>
+            <p>Customer Development specialists who design and run validation cycles, user interviews, surveys, and rapid experiments.</p>
+          </div>
+          <div class="team__card">
+            <div class="team__card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+            <h4>Process Engineers</h4>
+            <p>BPMN certified analysts and Six Sigma practitioners who optimize workflows, eliminate waste, and design for scale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ PRICING ══════ -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header" data-anim="fade-up">
+        <span class="tag">Engagement Models</span>
+        <h2 class="title">Flexible pricing,<br/><em>tailored to your stage</em></h2>
+        <p class="sub">Every engagement starts with a free diagnostic call. Scope and pricing are customized after we understand your needs.</p>
+      </div>
+      <div class="pricing__grid">
+        <div class="price-card" data-anim="fade-up" data-delay="0">
+          <div class="price-card__head">
+            <span class="price-card__tier">Sprint</span>
+            <div class="price-card__price">from <strong>$5,000</strong></div>
+            <span class="price-card__period">2–3 week engagement</span>
+          </div>
+          <p class="price-card__desc">Focused diagnostic or single-domain process redesign. Fast clarity on one critical area.</p>
+          <ul class="price-card__list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Single workstream audit</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>BPMN current-state mapping</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Actionable recommendations deck</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>1 stakeholder workshop</li>
+          </ul>
+          <a href="mailto:cooperation@namlab.io?subject=Sprint%20Engagement%20Inquiry" class="btn btn--outline btn--full">Get a Quote</a>
+        </div>
+
+        <div class="price-card price-card--featured" data-anim="fade-up" data-delay="1">
+          <div class="price-card__badge">Most Popular</div>
+          <div class="price-card__head">
+            <span class="price-card__tier">Transformation</span>
+            <div class="price-card__price">from <strong>$15,000</strong></div>
+            <span class="price-card__period">6–10 week engagement</span>
+          </div>
+          <p class="price-card__desc">Full-stack consulting: audit, CustDev, process design, portfolio review & delivery pipeline setup.</p>
+          <ul class="price-card__list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Multi-stream organizational audit</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Customer Development cycle</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>BPMN to-be process models</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Product portfolio scorecard</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Discovery → Delivery pipeline v1</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Workshops + executive readout</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>30-day post-delivery support</li>
+          </ul>
+          <a href="mailto:cooperation@namlab.io?subject=Transformation%20Engagement%20Inquiry" class="btn btn--accent btn--full">Get a Quote</a>
+        </div>
+
+        <div class="price-card" data-anim="fade-up" data-delay="2">
+          <div class="price-card__head">
+            <span class="price-card__tier">Retainer</span>
+            <div class="price-card__price">from <strong>$4,000</strong><span>/mo</span></div>
+            <span class="price-card__period">Ongoing · Cancel anytime</span>
+          </div>
+          <p class="price-card__desc">Embedded advisory for continuous transformation. Fractional CPO-level strategic guidance on demand.</p>
+          <ul class="price-card__list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Dedicated senior consultant</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Weekly strategy syncs</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Continuous process optimization</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Quarterly business reviews</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>On-demand CustDev support</li>
+          </ul>
+          <a href="mailto:cooperation@namlab.io?subject=Retainer%20Engagement%20Inquiry" class="btn btn--outline btn--full">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ TESTIMONIALS ══════ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header" data-anim="fade-up">
+        <span class="tag">Client Voices</span>
+        <h2 class="title">Trusted by teams<br/><em>building what's next</em></h2>
+      </div>
+      <div class="test__grid">
+        <div class="test-card" data-anim="fade-up" data-delay="0">
+          <div class="test-card__stars">★★★★★</div>
+          <blockquote>"NAM Lab completely rewired how our product org thinks about delivery. They didn't just audit — they rolled up their sleeves and implemented. Cycle time dropped 40% in three months."</blockquote>
+          <div class="test-card__author"><div class="test-card__av">AK</div><div><strong>Anna K.</strong><span>VP of Product · FinTech Scale-up</span></div></div>
+        </div>
+        <div class="test-card" data-anim="fade-up" data-delay="1">
+          <div class="test-card__stars">★★★★★</div>
+          <blockquote>"The BPMN process maps saved us 6 months of internal debate. Every stakeholder finally had a single source of truth. A game-changer for our compliance certification."</blockquote>
+          <div class="test-card__author"><div class="test-card__av">MR</div><div><strong>Marcus R.</strong><span>COO · Enterprise SaaS</span></div></div>
+        </div>
+        <div class="test-card" data-anim="fade-up" data-delay="2">
+          <div class="test-card__stars">★★★★★</div>
+          <blockquote>"They helped us sunset 3 products and double investment in 2 others. Revenue per product jumped 68% within a single quarter. Incredible ROI on the engagement."</blockquote>
+          <div class="test-card__author"><div class="test-card__av">LS</div><div><strong>Lena S.</strong><span>CEO · Digital Commerce Group</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ CONTACT / CTA ══════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__box" data-anim="fade-up">
+        <div class="contact__glow"></div>
+        <div class="contact__left">
+          <span class="tag">Get In Touch</span>
+          <h2 class="contact__title">Ready to stop guessing<br/>and start <em>shipping?</em></h2>
+          <p class="contact__desc">Book a free 30-minute diagnostic. We'll map your biggest bottleneck and show you exactly where to start.</p>
+          <a href="mailto:cooperation@namlab.io" class="btn btn--accent btn--lg">
+            Book Discovery Call
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="contact__right">
+          <div class="contact__channels">
+            <a href="mailto:cooperation@namlab.io" class="contact__ch">
+              <div class="contact__ch-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+              <div><strong>Partnerships & Projects</strong><span>cooperation@namlab.io</span></div>
+            </a>
+            <a href="mailto:info@namlab.io" class="contact__ch">
+              <div class="contact__ch-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+              <div><strong>General Inquiries</strong><span>info@namlab.io</span></div>
+            </a>
+            <a href="mailto:n.meleshkova@namlab.io" class="contact__ch">
+              <div class="contact__ch-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              <div><strong>Founder Direct</strong><span>n.meleshkova@namlab.io</span></div>
+            </a>
+            <a href="mailto:support@namlab.io" class="contact__ch">
+              <div class="contact__ch-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></div>
+              <div><strong>Client Support</strong><span>support@namlab.io</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="logo"><span class="logo__mark">N</span><span class="logo__text">NAM Lab</span></a>
+          <p>Product & R&D Consulting Studio.<br/>Validate. Design. Ship.</p>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__col">
+            <h4>Navigate</h4>
+            <a href="#about">About</a><a href="#services">Services</a><a href="#method">Method</a><a href="#pricing">Pricing</a>
+          </div>
+          <div class="footer__col">
+            <h4>Contact</h4>
+            <a href="mailto:cooperation@namlab.io">cooperation@namlab.io</a>
+            <a href="mailto:info@namlab.io">info@namlab.io</a>
+            <a href="mailto:marketing@namlab.io">marketing@namlab.io</a>
+          </div>
+          <div class="footer__col">
+            <h4>Connect</h4>
+            <a href="https://www.linkedin.com/in/nataly-meleshkova-30005ab9" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 NAM Lab. All rights reserved.</span>
+        <span>namlab.io</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

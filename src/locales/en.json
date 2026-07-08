@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "title": "NAM - Not a Machines | Boutique Product Lab - namlab.io",
+    "description": "Global boutique product lab. We rescue stalled products, launch new ones, and teach teams to build with soul - human intelligence first, AI as amplifier."
+  },
+  "nav": {
+    "services": "Services",
+    "forwhom": "For whom",
+    "team": "Team",
+    "products": "Products",
+    "podcast": "Podcast",
+    "contact": "Contact"
+  },
+  "cta": {
+    "bookcall": "Book a call"
+  },
+  "a11y": {
+    "title": "Accessibility",
+    "fontsize": "Larger text",
+    "contrast": "High contrast",
+    "motion": "Reduce motion",
+    "openMenu": "Accessibility options",
+    "closeModal": "Close dialog",
+    "openModal": "Open booking form"
+  },
+  "hero": {
+    "h1a": "Not a Machines.",
+    "h1b": "Building products with soul.",
+    "subtitle": "We are NAM - a global boutique product lab. An international cross-functional team that rescues stalled products, validates new ideas, and teaches teams to think like product strategists - with human intelligence first and AI as an amplifier, never a replacement.",
+    "ctaPrimary": "Book a call",
+    "ctaSecondary": "Explore services"
+  },
+  "marquee": ["Not a Machines", "Building products with soul", "Rescue", "Launch", "Teach", "Human intelligence first", "AI as amplifier"],
+  "eyebrow": {
+    "forwhom": "For whom",
+    "services": "Services",
+    "probono": "Zero cost, full quality",
+    "philosophy": "Manifesto",
+    "team": "Team",
+    "office": "Office",
+    "courses": "Products",
+    "podcast": "Media",
+    "contact": "Contact"
+  },
+  "forwhom": {
+    "title": "Who we are for",
+    "cards": [
+      {
+        "title": "Startup founders & idea holders",
+        "body": "You have an idea and the courage to build it - but no map. We validate your concept with a clear Go / Pivot / Kill verdict, shape the business model, and define what to build first so you spend money on learning, not guessing.",
+        "cta": "This is me"
+      },
+      {
+        "title": "Small businesses",
+        "body": "Your business works offline or in early digital form, and you feel the market shifting. We help you design your first digital product, price it right, and launch without burning the budget on features nobody asked for.",
+        "cta": "This is me"
+      },
+      {
+        "title": "Medium businesses",
+        "body": "The team is in place, processes run - but the product has flatlined. Revenue plateau, feature fatigue, founder bottleneck. We diagnose why growth stopped at the product level and design the way out - together with your team, not instead of it.",
+        "cta": "This is me"
+      },
+      {
+        "title": "Products that need a rescue or redesign",
+        "body": "Your product or service brings revenue but has lost its edge - outdated experience, unclear positioning, AI confusion. We run a full product autopsy, rebuild the strategy, and give your product its next chapter.",
+        "cta": "This is me"
+      }
+    ]
+  },
+  "services": {
+    "title": "What we do",
+    "intro": "Three pillars. One philosophy: human intelligence first, AI as amplifier.",
+    "disclaimer": "Final scope defined after a discovery call.",
+    "pillars": [
+      {
+        "name": "NAM Consulting",
+        "label": "The Lab",
+        "intro": "Hands-on product strategy for real businesses - from idea validation to full product rescue.",
+        "packages": [
+          {
+            "name": "Product Rescue Sprint",
+            "duration": "10-14 weeks",
+            "for": "For medium businesses with stalled products",
+            "price": "from $15,000",
+            "bullets": [
+              "Product Autopsy - deep audit of analytics, user journeys and market shifts",
+              "Strategic Reset - two-day leadership workshop, revised strategy and 90-day action plan",
+              "Guided Execution - hands-on coaching of your team through the first sprints",
+              "Deliverables: Product Health Report, Product Restart Kit, Independent Flight Plan"
+            ]
+          },
+          {
+            "name": "Product Launch Lab",
+            "duration": "8-10 weeks",
+            "for": "For founders and small businesses with new ideas",
+            "price": "from $5,000",
+            "bullets": [
+              "Discovery Workshop - two days of deep research into idea, market and users",
+              "Product Viability Assessment with an honest Go / Pivot / Kill verdict",
+              "Business model, unit economics and GTM strategy with a 90-day plan",
+              "MVP scope definition and AI Integration Audit - where AI truly adds value"
+            ]
+          },
+          {
+            "name": "NAM Retainer",
+            "duration": "Monthly, 15-25 hours",
+            "for": "For teams after a sprint who want ongoing strategic support",
+            "price": "from $3,000/month",
+            "bullets": [
+              "Monthly product strategy review sessions",
+              "Async advisory in a dedicated channel",
+              "Quarterly roadmap calibration",
+              "Access to the NAM expert network"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "NAM Academy",
+        "label": "The School",
+        "intro": "Deep, practice-first product education - for founders, product managers of every level, and career switchers.",
+        "packages": [
+          {
+            "name": "Product Building with Soul",
+            "duration": "6 weeks, cohorts of 15-20",
+            "for": "Flagship cohort course",
+            "price": "from $1,200",
+            "bullets": [
+              "Discovery without self-deception",
+              "Business models with soul",
+              "Product-market fit without illusions",
+              "AI as partner, not prosthesis",
+              "Real-world GTM",
+              "Growth without burning out"
+            ]
+          },
+          {
+            "name": "NAM Deep Dives",
+            "duration": "3-4 hour intensives",
+            "for": "Masterclass series",
+            "price": "from $80",
+            "bullets": [
+              "Product Rescue 101",
+              "AI Integration without BS",
+              "Pricing with Purpose",
+              "From Founder to Product Leader",
+              "Discovery for career switchers"
+            ]
+          },
+          {
+            "name": "In-House Team Workshops",
+            "duration": "1-3 days, remote or on-site",
+            "for": "For product teams of client companies",
+            "price": "from $5,000",
+            "bullets": [
+              "Product Strategy Alignment",
+              "AI-Augmented Product Development",
+              "Cross-Functional Collaboration Sprint",
+              "Product Discovery Intensive"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "NAM Media",
+        "label": "The Voice",
+        "intro": "Ideas, conversations and calm - for people who build products.",
+        "packages": [
+          {
+            "name": "Podcast \"Not a Machines\"",
+            "duration": "Twice a month",
+            "for": "For everyone who builds",
+            "price": "",
+            "bullets": [
+              "Honest conversations about products, stagnation, rescue and meaningful AI."
+            ]
+          },
+          {
+            "name": "Newsletter \"The NAM Perspective\"",
+            "duration": "Weekly",
+            "for": "For product minds",
+            "price": "",
+            "bullets": [
+              "Weekly practical insights for product minds."
+            ]
+          },
+          {
+            "name": "Product Mindfulness",
+            "duration": "Ongoing",
+            "for": "For product leaders",
+            "price": "",
+            "bullets": [
+              "Guided meditations and rituals for product leaders - because burnout kills more products than competitors do."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "probono": {
+    "title": "Pro Bono for Defenders",
+    "body": "We take on product cases of veterans of the Russian-Ukrainian war completely free of charge. Same team. Same process. Same quality. Zero cost. You defended the future - we will help you build it. If you are a veteran with a product idea or an existing business that needs product expertise, apply below.",
+    "cta": "Apply as a veteran"
+  },
+  "philosophy": {
+    "title": "Our philosophy",
+    "manifesto": "We are Not a Machines. We use machines to be more human.",
+    "principles": [
+      "AI amplifies judgment, never replaces it. AI gives data - people give meaning.",
+      "The 80/20 rule. AI handles 80% of routine; strategy, empathy and creative breakthroughs remain exclusively human territory.",
+      "AI-washing detection. We help clients spot where AI adds real value versus where it is just marketing.",
+      "Meaningful integration test. Does it improve the end-user experience? Can a human do it better? Does it add meaning - or just automation?"
+    ]
+  },
+  "team": {
+    "title": "The people behind NAM",
+    "linkedin": "LinkedIn profile of",
+    "members": [
+      {
+        "name": "Nataliia M.",
+        "role": "Co-founder & CEO, Product Strategy Lead",
+        "bio": "10+ years leading products across B2B, B2C and B2B2C in five regions. Former CPO with certified expertise in SAFe Product Ownership, Six Sigma Black Belt and IBM Enterprise Design Thinking. Specializes in product diagnostics, business model design, GTM strategy and Web3 ecosystems. Believes every product deserves an honest verdict before a beautiful roadmap."
+      },
+      {
+        "name": "Alex K.",
+        "role": "Co-founder, Head of Design & UX",
+        "bio": "Product designer with a decade of experience turning complex services into interfaces people actually enjoy. Expert in UX research, design systems, accessibility-first design and rapid prototyping. Leads NAM's design diagnostics inside every Product Rescue Sprint - because most \"growth problems\" hide in experience debt."
+      },
+      {
+        "name": "Marko D.",
+        "role": "Co-founder, Head of Technology",
+        "bio": "Engineering leader with hands-on experience scaling platforms from MVP to millions of users. Deep expertise in system architecture, technical due diligence, AI integration strategy and build-vs-buy decisions. Translates business ambition into technical reality - and tells founders the truth about what their stack can and cannot do."
+      },
+      {
+        "name": "Iryna S.",
+        "role": "Marketing & Growth Lead",
+        "bio": "Growth strategist specializing in positioning, content ecosystems and community-led growth for B2B services. Runs NAM's media pillar - podcast, newsletter and social presence - and designs GTM engines for client engagements. Obsessed with one question: why should anyone care?"
+      }
+    ]
+  },
+  "office": {
+    "title": "Where to find us",
+    "address": "Viking Business Center, Zelena St, 151, Lviv, Lviv Oblast, 79000, Ukraine",
+    "note": "We work globally - remote-first, office by appointment.",
+    "mapTitle": "Map: Viking Business Center, Zelena St 151, Lviv"
+  },
+  "courses": {
+    "title": "NAM Academy courses",
+    "intro": "Twenty deep, practice-first courses. Launching soon on Udemy.",
+    "badge": "COMING SOON",
+    "button": "Purchase",
+    "tooltip": "Available soon on Udemy",
+    "filters": {
+      "all": "All",
+      "strategy": "Strategy",
+      "discovery": "Discovery",
+      "ai": "AI",
+      "growth": "Growth",
+      "leadership": "Leadership"
+    }
+  },
+  "podcast": {
+    "title": "Podcast: Not a Machines",
+    "body": "Honest conversations about products that stalled, products that survived, and the people behind them. Product autopsies, founder stories and AI reality checks - twice a month.",
+    "apple": "Listen on Apple Podcasts",
+    "youtube": "Watch on YouTube"
+  },
+  "form": {
+    "title": "Book a call",
+    "subtitle": "Tell us who you are - we will reach out within 24 hours.",
+    "veteranNote": "You are applying through the Pro Bono for Defenders program.",
+    "firstname": "First name",
+    "lastname": "Last name",
+    "company": "Company (optional)",
+    "email": "Email",
+    "phone": "Phone number (optional)",
+    "submit": "Book a call",
+    "sending": "Sending...",
+    "success": "Thank you! We will reach out within 24 hours.",
+    "error": "Something went wrong. Write to us directly: hello@namlab.io",
+    "required": "This field is required",
+    "emailInvalid": "Please enter a valid email",
+    "phoneInvalid": "Please enter a valid phone number in international format"
+  },
+  "footer": {
+    "tagline": "Not a Machines. Building products with soul.",
+    "about": "Global boutique product lab. We rescue, launch and teach - human intelligence first.",
+    "nav": "Navigation",
+    "contact": "Contact",
+    "follow": "Follow us",
+    "rights": "© 2026 namlab.io - All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  }
+}

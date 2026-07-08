@@ -15,8 +15,8 @@
   --color-deep: #0f2b2b;
   --color-petrol: #1a3a3a;
   --color-verdigris: #6b9e9e;
-  --color-copper: #c17b4a;
-  --color-copper-light: #d28e5e;
+  --color-copper: #d08040;
+  --color-copper-light: #e09355;
   --color-copper-deep: #a05a2c;
   --color-sand: #e8c9a0;
   --color-stone: #f5f1eb;
@@ -135,12 +135,92 @@ html.a11y-motion .reveal {
 /* Scroll reveal (Intersection Observer adds .is-visible) */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transform: translateY(28px) scale(0.99);
+  filter: blur(4px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s ease-out;
 }
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+  filter: none;
+}
+
+/* Section title copper underline grows once the title reveals */
+.title-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.35rem;
+}
+.title-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 64px;
+  border-radius: 2px;
+  background-color: var(--color-copper);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s;
+}
+.reveal.is-visible .title-underline::after {
+  transform: scaleX(1);
+}
+
+/* Card micro-interaction: gentle lift, border warms to copper */
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease;
+  will-change: transform;
+}
+.card-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Button arrow nudge */
+.arrow-nudge svg {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.arrow-nudge:hover svg,
+.arrow-nudge:focus-visible svg {
+  transform: translateX(4px);
+}
+
+/* Course card art zoom */
+.art-zoom {
+  overflow: hidden;
+}
+.art-zoom svg {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.art-zoom:hover svg {
+  transform: scale(1.06);
+}
+
+/* Editorial marquee strip */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 36s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+html.a11y-motion .marquee-track {
+  animation: none;
 }
 
 /* Hero staggered entrance */

@@ -30,6 +30,18 @@
     "ctaPrimary": "Book a call",
     "ctaSecondary": "Explore services"
   },
+  "marquee": ["Not a Machines", "Building products with soul", "Rescue", "Launch", "Teach", "Human intelligence first", "AI as amplifier"],
+  "eyebrow": {
+    "forwhom": "For whom",
+    "services": "Services",
+    "probono": "Zero cost, full quality",
+    "philosophy": "Manifesto",
+    "team": "Team",
+    "office": "Office",
+    "courses": "Products",
+    "podcast": "Media",
+    "contact": "Contact"
+  },
   "forwhom": {
     "title": "Who we are for",
     "cards": [

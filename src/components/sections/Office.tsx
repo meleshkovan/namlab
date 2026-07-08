@@ -1,5 +1,6 @@
 import { useI18n } from "@/lib/i18n"
 import { Reveal } from "@/lib/reveal"
+import { SectionTitle } from "@/components/SectionTitle"
 
 const MAP_EMBED =
   "https://www.google.com/maps?q=" +
@@ -12,11 +13,7 @@ export function Office() {
   return (
     <section id="office" aria-labelledby="office-title" className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <Reveal>
-          <h2 id="office-title" className="font-display text-4xl font-medium text-deep sm:text-5xl">
-            {t("office.title")}
-          </h2>
-        </Reveal>
+        <SectionTitle id="office-title" eyebrowKey="eyebrow.office" titleKey="office.title" />
         <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-2">
           <Reveal>
             <div className="flex h-full flex-col justify-between rounded-card border-[0.5px] border-verdigris/40 bg-stone p-8">

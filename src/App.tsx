@@ -3,6 +3,7 @@ import { BookingProvider } from "@/lib/booking"
 import { Header } from "@/components/Header"
 import { BookCallModal } from "@/components/BookCallModal"
 import { Hero } from "@/components/sections/Hero"
+import { Marquee } from "@/components/sections/Marquee"
 import { ForWhom } from "@/components/sections/ForWhom"
 import { Services } from "@/components/sections/Services"
 import { ProBono } from "@/components/sections/ProBono"
@@ -21,6 +22,7 @@ function App() {
         <Header />
         <main>
           <Hero />
+          <Marquee />
           <ForWhom />
           <Services />
           <ProBono />

@@ -1,5 +1,6 @@
 import { useI18n } from "@/lib/i18n"
 import { Reveal } from "@/lib/reveal"
+import { SectionTitle } from "@/components/SectionTitle"
 
 const PHOTOS = ["/images/team-1.svg", "/images/team-2.svg", "/images/team-3.svg", "/images/team-4.svg"]
 
@@ -9,15 +10,11 @@ export function Team() {
   return (
     <section id="team" aria-labelledby="team-title" className="bg-stone py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <Reveal>
-          <h2 id="team-title" className="font-display text-4xl font-medium text-deep sm:text-5xl">
-            {t("team.title")}
-          </h2>
-        </Reveal>
+        <SectionTitle id="team-title" eyebrowKey="eyebrow.team" titleKey="team.title" />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {dict.team.members.map((member, index) => (
             <Reveal key={member.role} delay={index * 100}>
-              <article className="flex h-full flex-col rounded-card border-[0.5px] border-verdigris/40 bg-cream p-5">
+              <article className="card-lift flex h-full flex-col rounded-card border-[0.5px] border-verdigris/40 bg-cream p-5 hover:border-copper/70">
                 <img
                   src={PHOTOS[index]}
                   alt={`${member.name} - ${member.role}`}

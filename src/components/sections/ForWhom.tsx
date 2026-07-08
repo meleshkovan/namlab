@@ -1,5 +1,6 @@
 import { useI18n } from "@/lib/i18n"
 import { Reveal } from "@/lib/reveal"
+import { SectionTitle } from "@/components/SectionTitle"
 
 const ICONS = [
   // Lightbulb - founders & idea holders
@@ -17,20 +18,16 @@ const ICONS = [
 ]
 
 export function ForWhom() {
-  const { dict, t } = useI18n()
+  const { dict } = useI18n()
 
   return (
     <section id="for-whom" aria-labelledby="forwhom-title" className="bg-stone py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <Reveal>
-          <h2 id="forwhom-title" className="font-display text-4xl font-medium text-deep sm:text-5xl">
-            {t("forwhom.title")}
-          </h2>
-        </Reveal>
+        <SectionTitle id="forwhom-title" eyebrowKey="eyebrow.forwhom" titleKey="forwhom.title" />
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {dict.forwhom.cards.map((card, index) => (
             <Reveal key={card.title} delay={index * 100}>
-              <article className="flex h-full flex-col rounded-card border-[0.5px] border-verdigris/40 bg-cream p-7 transition-colors hover:border-copper/60">
+              <article className="card-lift flex h-full flex-col rounded-card border-[0.5px] border-verdigris/40 bg-cream p-7 hover:border-copper/70">
                 <span aria-hidden="true" className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-card border-[0.5px] border-copper/40 text-copper-deep">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                     {ICONS[index]}
@@ -38,7 +35,7 @@ export function ForWhom() {
                 </span>
                 <h3 className="text-xl font-semibold text-deep">{card.title}</h3>
                 <p className="mt-3 grow leading-relaxed text-ink/75">{card.body}</p>
-                <a href="#contact" className="mt-5 inline-flex items-center gap-1.5 font-semibold text-copper-deep transition-colors hover:text-copper">
+                <a href="#contact" className="arrow-nudge mt-5 inline-flex items-center gap-1.5 font-semibold text-copper-deep transition-colors hover:text-copper">
                   {card.cta}
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M5 12h14m-6-6 6 6-6 6" />

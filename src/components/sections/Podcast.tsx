@@ -8,10 +8,11 @@ export function Podcast() {
     <section id="podcast" aria-labelledby="podcast-title" className="grain relative bg-petrol py-20 text-stone sm:py-28">
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
-          <h2 id="podcast-title" className="font-display text-4xl font-medium sm:text-5xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-copper-light">{t("eyebrow.podcast")}</p>
+          <h2 id="podcast-title" className="font-display title-underline mt-3 text-4xl font-medium sm:text-5xl">
             {t("podcast.title")}
           </h2>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-verdigris">{t("podcast.body")}</p>
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-verdigris">{t("podcast.body")}</p>
         </Reveal>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           <Reveal>
@@ -19,7 +20,7 @@ export function Podcast() {
               href="https://podcasts.apple.com/namlab"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-5 rounded-card border-[0.5px] border-verdigris/40 bg-deep p-7 transition-colors hover:border-copper"
+              className="card-lift group flex items-center gap-5 rounded-card border-[0.5px] border-verdigris/40 bg-deep p-7 hover:border-copper"
             >
               {/* Apple Podcasts mark, outline style */}
               <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="shrink-0 text-verdigris transition-colors group-hover:text-copper">
@@ -35,7 +36,7 @@ export function Podcast() {
               href="https://youtube.com/@namlab"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-5 rounded-card border-[0.5px] border-verdigris/40 bg-deep p-7 transition-colors hover:border-copper"
+              className="card-lift group flex items-center gap-5 rounded-card border-[0.5px] border-verdigris/40 bg-deep p-7 hover:border-copper"
             >
               {/* YouTube mark, outline style */}
               <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="shrink-0 text-verdigris transition-colors group-hover:text-copper">

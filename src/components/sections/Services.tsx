@@ -1,6 +1,7 @@
 import { useI18n } from "@/lib/i18n"
 import { useBooking } from "@/lib/booking"
 import { Reveal } from "@/lib/reveal"
+import { SectionTitle } from "@/components/SectionTitle"
 
 export function Services() {
   const { dict, t } = useI18n()
@@ -9,12 +10,7 @@ export function Services() {
   return (
     <section id="services" aria-labelledby="services-title" className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <Reveal>
-          <h2 id="services-title" className="font-display text-4xl font-medium text-deep sm:text-5xl">
-            {t("services.title")}
-          </h2>
-          <p className="mt-4 max-w-2xl text-lg text-ink/70">{t("services.intro")}</p>
-        </Reveal>
+        <SectionTitle id="services-title" eyebrowKey="eyebrow.services" titleKey="services.title" intro={t("services.intro")} />
 
         <div className="mt-14 space-y-16">
           {dict.services.pillars.map((pillar, pillarIndex) => (
@@ -30,8 +26,8 @@ export function Services() {
                   {pillar.packages.map((pkg) => (
                     <article
                       key={pkg.name}
-                      className={`flex h-full flex-col rounded-card border-[0.5px] p-7 transition-colors ${
-                        pillarIndex === 2 ? "border-verdigris/40 bg-stone" : "border-verdigris/40 bg-stone hover:border-copper/60"
+                      className={`card-lift flex h-full flex-col rounded-card border-[0.5px] border-verdigris/40 bg-stone p-7 ${
+                        pillarIndex === 2 ? "" : "hover:border-copper/70"
                       }`}
                     >
                       <h4 className="text-lg font-semibold text-deep">{pkg.name}</h4>

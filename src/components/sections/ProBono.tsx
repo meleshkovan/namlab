@@ -11,7 +11,8 @@ export function ProBono() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <div className="max-w-3xl border-l-4 border-copper-deep pl-6 sm:pl-8">
-            <h2 id="probono-title" className="font-display text-4xl font-medium text-deep sm:text-5xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-copper-deep">{t("eyebrow.probono")}</p>
+            <h2 id="probono-title" className="font-display mt-3 text-4xl font-medium text-deep sm:text-5xl">
               {t("probono.title")}
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-ink/85">{t("probono.body")}</p>

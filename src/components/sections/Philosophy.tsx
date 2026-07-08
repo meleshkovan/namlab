@@ -8,7 +8,8 @@ export function Philosophy() {
     <section id="philosophy" aria-labelledby="philosophy-title" className="grain relative bg-deep py-20 text-stone sm:py-28">
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
-          <h2 id="philosophy-title" className="font-display text-4xl font-medium sm:text-5xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-copper-light">{t("eyebrow.philosophy")}</p>
+          <h2 id="philosophy-title" className="font-display title-underline mt-3 text-4xl font-medium sm:text-5xl">
             {t("philosophy.title")}
           </h2>
         </Reveal>
@@ -20,7 +21,7 @@ export function Philosophy() {
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {dict.philosophy.principles.map((principle, index) => (
             <Reveal key={principle} delay={index * 100}>
-              <div className="flex h-full gap-5 rounded-card border-[0.5px] border-verdigris/30 bg-petrol p-6">
+              <div className="card-lift flex h-full gap-5 rounded-card border-[0.5px] border-verdigris/30 bg-petrol p-6 hover:border-copper/60">
                 <span aria-hidden="true" className="font-display text-3xl font-medium text-copper">
                   {String(index + 1).padStart(2, "0")}
                 </span>

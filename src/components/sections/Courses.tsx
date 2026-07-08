@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useI18n } from "@/lib/i18n"
 import { Reveal } from "@/lib/reveal"
+import { SectionTitle } from "@/components/SectionTitle"
 
 const UDEMY_URL = "https://www.udemy.com/user/namlab/"
 
@@ -58,12 +59,7 @@ export function Courses() {
   return (
     <section id="products" aria-labelledby="courses-title" className="bg-stone py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <Reveal>
-          <h2 id="courses-title" className="font-display text-4xl font-medium text-deep sm:text-5xl">
-            {t("courses.title")}
-          </h2>
-          <p className="mt-4 max-w-2xl text-lg text-ink/70">{t("courses.intro")}</p>
-        </Reveal>
+        <SectionTitle id="courses-title" eyebrowKey="eyebrow.courses" titleKey="courses.title" intro={t("courses.intro")} />
 
         <Reveal delay={100}>
           <div role="tablist" aria-label={t("courses.title")} className="mt-8 flex flex-wrap gap-2">
@@ -89,8 +85,8 @@ export function Courses() {
             const index = COURSES.indexOf(course)
             return (
               <li key={course.title}>
-                <article className="flex h-full flex-col overflow-hidden rounded-card border-[0.5px] border-verdigris/40 bg-cream transition-colors hover:border-copper/60">
-                  <div className="relative">
+                <article className="card-lift flex h-full flex-col overflow-hidden rounded-card border-[0.5px] border-verdigris/40 bg-cream hover:border-copper/70">
+                  <div className="art-zoom relative">
                     <CourseArt index={index} />
                     <span className="absolute left-3 top-3 rounded-[6px] bg-petrol px-2.5 py-1 text-[11px] font-bold uppercase tracking-widest text-copper-light">
                       {t("courses.badge")}

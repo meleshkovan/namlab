@@ -1,140 +1,196 @@
 @import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter/index.css";
+@import "@fontsource-variable/fraunces/index.css";
 
-@custom-variant dark (&:is(.dark *));
+/*
+  NAM - Not a Machines design system
+  Deep Petrol & Oxidized Copper. Never pure #FFF / #000.
+  Fraunces = display headlines only (Latin); Georgia serves as the Cyrillic serif fallback.
+*/
 
-@theme inline {
-    --font-heading: 'Sora', sans-serif;
-    --font-sans: 'Sora', sans-serif;
-    --font-serif: 'Instrument Serif', Georgia, serif;
-    --font-mono: 'JetBrains Mono', monospace;
+@theme {
+  --font-sans: "Inter Variable", "Inter", system-ui, sans-serif;
+  --font-display: "Fraunces Variable", "Fraunces", Georgia, "Times New Roman", serif;
 
-    --color-brand: #3B82F6;
-    --color-brand-light: #60A5FA;
-    --color-brand-dark: #2563EB;
-    --color-bg-base: #060810;
-    --color-bg-2: #0a0d16;
-    --color-bg-card: #0d1120;
-    --color-bg-card-hover: #111628;
-    --color-bg-elev: #151b30;
-    --color-text-1: #E8EAF0;
-    --color-text-2: #8890A4;
-    --color-text-3: #4A5068;
+  --color-deep: #0f2b2b;
+  --color-petrol: #1a3a3a;
+  --color-verdigris: #6b9e9e;
+  --color-copper: #c17b4a;
+  --color-copper-light: #d28e5e;
+  --color-copper-deep: #a05a2c;
+  --color-sand: #e8c9a0;
+  --color-stone: #f5f1eb;
+  --color-cream: #fdfbf8;
+  --color-ink: #0a1f1f;
 
-    --color-sidebar-ring: var(--sidebar-ring);
-    --color-sidebar-border: var(--sidebar-border);
-    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-    --color-sidebar-accent: var(--sidebar-accent);
-    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-    --color-sidebar-primary: var(--sidebar-primary);
-    --color-sidebar-foreground: var(--sidebar-foreground);
-    --color-sidebar: var(--sidebar);
-    --color-chart-5: var(--chart-5);
-    --color-chart-4: var(--chart-4);
-    --color-chart-3: var(--chart-3);
-    --color-chart-2: var(--chart-2);
-    --color-chart-1: var(--chart-1);
-    --color-ring: var(--ring);
-    --color-input: var(--input);
-    --color-border: var(--border);
-    --color-destructive: var(--destructive);
-    --color-accent-foreground: var(--accent-foreground);
-    --color-accent: var(--accent);
-    --color-muted-foreground: var(--muted-foreground);
-    --color-muted: var(--muted);
-    --color-secondary-foreground: var(--secondary-foreground);
-    --color-secondary: var(--secondary);
-    --color-primary-foreground: var(--primary-foreground);
-    --color-primary: var(--primary);
-    --color-popover-foreground: var(--popover-foreground);
-    --color-popover: var(--popover);
-    --color-card-foreground: var(--card-foreground);
-    --color-card: var(--card);
-    --color-foreground: var(--foreground);
-    --color-background: var(--background);
-    --radius-sm: calc(var(--radius) * 0.6);
-    --radius-md: calc(var(--radius) * 0.8);
-    --radius-lg: var(--radius);
-    --radius-xl: calc(var(--radius) * 1.4);
-    --radius-2xl: calc(var(--radius) * 1.8);
-    --radius-3xl: calc(var(--radius) * 2.2);
-    --radius-4xl: calc(var(--radius) * 2.6);
+  --radius-card: 12px;
+  --radius-btn: 8px;
 }
 
 :root {
-    --background: #060810;
-    --foreground: #E8EAF0;
-    --card: #0d1120;
-    --card-foreground: #E8EAF0;
-    --popover: #0d1120;
-    --popover-foreground: #E8EAF0;
-    --primary: #3B82F6;
-    --primary-foreground: #ffffff;
-    --secondary: #151b30;
-    --secondary-foreground: #E8EAF0;
-    --muted: #151b30;
-    --muted-foreground: #8890A4;
-    --accent: #3B82F6;
-    --accent-foreground: #ffffff;
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: rgba(255,255,255,.06);
-    --input: rgba(255,255,255,.1);
-    --ring: #3B82F6;
-    --chart-1: #3B82F6;
-    --chart-2: #60A5FA;
-    --chart-3: #2563EB;
-    --chart-4: #8B5CF6;
-    --chart-5: #A78BFA;
-    --radius: 0.625rem;
-    --sidebar: #0a0d16;
-    --sidebar-foreground: #E8EAF0;
-    --sidebar-primary: #3B82F6;
-    --sidebar-primary-foreground: #ffffff;
-    --sidebar-accent: #151b30;
-    --sidebar-accent-foreground: #E8EAF0;
-    --sidebar-border: rgba(255,255,255,.06);
-    --sidebar-ring: #3B82F6;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 }
 
 @layer base {
-    * {
-        @apply border-border outline-ring/50;
-    }
-    body {
-        @apply bg-background text-foreground;
-        font-family: var(--font-sans);
-        line-height: 1.6;
-        overflow-x: hidden;
-        -webkit-font-smoothing: antialiased;
-    }
-    html {
-        scroll-behavior: smooth;
-    }
-    em {
-        font-family: var(--font-serif);
-        font-style: italic;
-        color: var(--color-brand-light);
-    }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-copper);
+    color: var(--color-cream);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-copper);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
 }
 
-@layer utilities {
-    .font-serif {
-        font-family: var(--font-serif);
-    }
-    .font-mono {
-        font-family: var(--font-mono);
-    }
+/* ---- Accessibility switches (toggled on <html>) ---- */
+
+html.a11y-font {
+  font-size: 125%;
 }
 
-@keyframes orb-float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50%      { transform: translate(30px, -25px) scale(1.06); }
+html.a11y-contrast body {
+  background-color: #ffffff;
+  color: #041010;
 }
-.animate-orb-float { animation: orb-float 14s ease-in-out infinite; }
+html.a11y-contrast {
+  --color-deep: #06201f;
+  --color-petrol: #0c2a29;
+  --color-verdigris: #8fc4c4;
+  --color-copper: #ab6127;
+  --color-copper-deep: #8a4a1c;
+  --color-ink: #041010;
+  --color-stone: #fbf9f5;
+  --color-cream: #ffffff;
+}
 
-@keyframes marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+html.a11y-motion *,
+html.a11y-motion *::before,
+html.a11y-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
 }
-.animate-marquee { animation: marquee 40s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+html.a11y-motion .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ---- Utilities ---- */
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@utility grain {
+  position: relative;
+}
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--grain);
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scroll reveal (Intersection Observer adds .is-visible) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero staggered entrance */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-stagger {
+  opacity: 0;
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+/* Header entrance */
+@keyframes header-in {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.header-in {
+  animation: header-in 0.6s ease-out both;
+}
+
+/* Slow organic decorative orb: copper -> verdigris drift */
+@keyframes orb-drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    border-radius: 58% 42% 55% 45% / 45% 58% 42% 55%;
+  }
+  33% {
+    transform: translate(4%, -6%) scale(1.08);
+    border-radius: 45% 55% 48% 52% / 55% 45% 58% 42%;
+  }
+  66% {
+    transform: translate(-3%, 4%) scale(0.96);
+    border-radius: 52% 48% 42% 58% / 48% 52% 45% 55%;
+  }
+}
+.orb {
+  background: radial-gradient(circle at 30% 30%, rgba(193, 123, 74, 0.55), rgba(107, 158, 158, 0.35) 60%, transparent 75%);
+  filter: blur(60px);
+  animation: orb-drift 18s ease-in-out infinite;
+}

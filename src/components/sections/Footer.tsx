@@ -1,56 +1,118 @@
+import { useI18n } from "@/lib/i18n"
+
+const NAV_ITEMS = [
+  { key: "nav.services", href: "#services" },
+  { key: "nav.forwhom", href: "#for-whom" },
+  { key: "nav.team", href: "#team" },
+  { key: "nav.products", href: "#products" },
+  { key: "nav.podcast", href: "#podcast" },
+  { key: "nav.contact", href: "#contact" },
+]
+
+const SOCIALS = [
+  {
+    name: "Instagram",
+    href: "https://instagram.com/namlab",
+    icon: (
+      <>
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none" />
+      </>
+    ),
+  },
+  {
+    name: "TikTok",
+    href: "https://tiktok.com/@namlab",
+    icon: (
+      <path d="M14.5 3v10.8a3.8 3.8 0 1 1-3.3-3.77M14.5 5.2A5.3 5.3 0 0 0 19.8 9" />
+    ),
+  },
+  {
+    name: "X (Twitter)",
+    href: "https://twitter.com/namlab",
+    icon: <path d="M4 4l7.1 9.3L4.4 20h2.3l5.4-5.4L16.5 20H20l-7.4-9.7L18.9 4h-2.3l-4.9 5L8.5 4z" />,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com/company/namlab",
+    icon: (
+      <>
+        <rect x="2" y="2" width="20" height="20" rx="4" />
+        <path d="M7 10v7M7 7v.01M11 17v-4a2.5 2.5 0 0 1 5 0v4M11 10v1.5" />
+      </>
+    ),
+  },
+]
+
 export function Footer() {
+  const { t } = useI18n()
+
   return (
-    <footer className="pt-16 pb-8" style={{ background: "var(--color-bg-2)", borderTop: "1px solid var(--border)" }}>
-      <div className="max-w-[1200px] mx-auto px-6">
-        <div className="grid md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10 pb-10" style={{ borderBottom: "1px solid var(--border)" }}>
+    <footer className="bg-deep pb-10 pt-16 text-stone">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <a href="#" className="flex items-center gap-2.5 font-bold text-base">
-              <span
-                className="w-[34px] h-[34px] rounded-lg text-white flex items-center justify-center font-extrabold"
-                style={{ background: "linear-gradient(135deg, var(--color-brand), var(--color-brand-dark))" }}
-              >
-                N
-              </span>
-              <span>NAM Lab</span>
-            </a>
-            <p className="mt-3 text-sm" style={{ color: "var(--color-text-2)" }}>
-              Product & R&D Consulting Studio.<br />
-              Validate. Design. Ship.
+            <p className="text-lg font-bold tracking-tight">
+              NAMLAB<span className="text-copper">.io</span>
             </p>
+            <p className="mt-3 font-medium text-sand">{t("footer.tagline")}</p>
+            <p className="mt-3 text-sm leading-relaxed text-verdigris">{t("footer.about")}</p>
           </div>
+
+          <nav aria-label="Footer">
+            <p className="text-sm font-semibold uppercase tracking-wider text-verdigris">{t("footer.nav")}</p>
+            <ul className="mt-4 space-y-2.5">
+              {NAV_ITEMS.map((item) => (
+                <li key={item.href}>
+                  <a href={item.href} className="text-stone/85 transition-colors hover:text-sand">
+                    {t(item.key)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           <div>
-            <h4 className="text-sm font-semibold mb-3 uppercase tracking-[0.1em]" style={{ color: "var(--color-text-1)" }}>
-              Navigate
-            </h4>
-            <div className="flex flex-col gap-2 text-sm" style={{ color: "var(--color-text-2)" }}>
-              <a href="#about" className="hover:text-brand">About</a>
-              <a href="#services" className="hover:text-brand">Services</a>
-              <a href="#method" className="hover:text-brand">Method</a>
-              <a href="#pricing" className="hover:text-brand">Pricing</a>
-            </div>
+            <p className="text-sm font-semibold uppercase tracking-wider text-verdigris">{t("footer.contact")}</p>
+            <a href="mailto:hello@namlab.io" className="mt-4 inline-block text-stone/85 transition-colors hover:text-sand">
+              hello@namlab.io
+            </a>
+            <address className="mt-3 text-sm not-italic leading-relaxed text-verdigris">{t("office.address")}</address>
           </div>
+
           <div>
-            <h4 className="text-sm font-semibold mb-3 uppercase tracking-[0.1em]" style={{ color: "var(--color-text-1)" }}>
-              Contact
-            </h4>
-            <div className="flex flex-col gap-2 text-sm" style={{ color: "var(--color-text-2)" }}>
-              <a href="mailto:cooperation@namlab.io">cooperation@namlab.io</a>
-              <a href="mailto:info@namlab.io">info@namlab.io</a>
-              <a href="mailto:marketing@namlab.io">marketing@namlab.io</a>
-            </div>
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold mb-3 uppercase tracking-[0.1em]" style={{ color: "var(--color-text-1)" }}>
-              Connect
-            </h4>
-            <div className="flex flex-col gap-2 text-sm" style={{ color: "var(--color-text-2)" }}>
-              <a href="https://www.linkedin.com/in/nataly-meleshkova-30005ab9" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
+            <p className="text-sm font-semibold uppercase tracking-wider text-verdigris">{t("footer.follow")}</p>
+            <ul className="mt-4 flex gap-3">
+              {SOCIALS.map((social) => (
+                <li key={social.name}>
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className="flex h-11 w-11 items-center justify-center rounded-btn border-[0.5px] border-verdigris/40 text-verdigris transition-colors hover:border-copper hover:text-copper"
+                  >
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      {social.icon}
+                    </svg>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-        <div className="pt-6 flex justify-between text-xs" style={{ color: "var(--color-text-3)" }}>
-          <span>© 2025 NAM Lab. All rights reserved.</span>
-          <span>namlab.io</span>
+
+        <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t-[0.5px] border-verdigris/25 pt-6 text-sm text-verdigris sm:flex-row sm:items-center">
+          <p>{t("footer.rights")}</p>
+          <div className="flex gap-6">
+            <a href="#" className="transition-colors hover:text-sand">
+              {t("footer.privacy")}
+            </a>
+            <a href="#" className="transition-colors hover:text-sand">
+              {t("footer.terms")}
+            </a>
+          </div>
         </div>
       </div>
     </footer>
